@@ -1,0 +1,17 @@
+.DS_Store
+*.aux
+*.tcp
+*.log
+*.tps
+*.synctex
+*.lof
+*.toc
+*.out
+*.idx
+*.glo
+*.lot
+*.lol
+*.synctex.gz
+*.bbl
+*.blg
+.texpadtmp

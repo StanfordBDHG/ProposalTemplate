@@ -1,0 +1,210 @@
+%%%%%%%%%%%%%%%%%%%
+% Document Setup
+%%%%%%%%%%%%%%%%%%%
+
+\documentclass[
+	pdftex,
+	letterpaper,
+	titlepage,
+	final,
+	oneside,
+	11pt,
+	DIV=calc,
+]{scrbook}
+\usepackage{scrhack}
+
+\setkomafont{disposition}{\normalfont\bfseries}
+\def\coverborderleft{20mm}
+
+\def\coverborderleft{20mm}
+\usepackage[left=30mm, right=30mm, top=30mm, bottom=30mm]{geometry}
+
+
+%%%%%%%%%%%%%%%%%%%
+% Typesetting
+%%%%%%%%%%%%%%%%%%%
+\usepackage{palatino}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\parindent0pt
+\parskip1ex
+\usepackage{setspace}
+
+% Line Spacing
+\singlespacing					% 1,0
+%\onehalfspacing				% 1,5
+%\doublespacing					% 2,0
+
+\usepackage[english]{babel}
+
+% BibTex
+\usepackage{natbib}
+\bibliographystyle{plain}
+\usepackage{etoolbox}
+
+
+%%%%%%%%%%%%%%%%%%%
+% Figures
+%%%%%%%%%%%%%%%%%%%
+
+% Graphics and figures
+\usepackage{graphicx, tikz, pgfplots}
+\graphicspath{{Images/}}
+\usepackage{rotating}
+
+% Insert PDF files
+\usepackage{pdfpages}
+\pdfminorversion=6
+\pdfcompresslevel=9
+\pdfobjcompresslevel=9
+
+% Define custom colors
+\usepackage{xcolor}
+\definecolor{gray1}{gray}{0.92}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{urlLinkColor}{rgb}{0,0,0.5}
+\definecolor{LinkColor}{rgb}{0,0,0}
+\definecolor{ListingBackground}{rgb}{0.85,0.85,0.85}
+
+\usepackage{color}
+\definecolor{LinkColor}{rgb}{0.1,0.1,0.1}
+\definecolor{ListingBackground}{rgb}{0.98,0.98,0.98}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+\usepackage{tcolorbox}
+
+
+%%%%%%%%%%%%%%%%%%%
+% Layout Tools
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage[absolute]{textpos}
+
+\usepackage{lipsum}
+\usepackage{pdftexcmds}
+\usepackage{enumitem}
+
+\makeatletter
+\newcommand{\customlabel}[2]{%
+   \protected@write \@auxout {}{\string \newlabel {#1}{{#2}{\thepage}{#2}{#1}{}} }%
+   \hypertarget{#1}{}
+}
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%
+% Code Listings
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage{listings}
+\lstloadlanguages{TeX, C++, XML, Matlab, Java, Python, C}
+
+% Swift syntax highlight definition for listings
+% Source: https://gist.github.com/chriseidhof/18dbc1c4eef919eab2c7
+\lstdefinelanguage{Swift} {
+  morekeywords={
+    open,catch,@escaping,nil,throws,func,if,then,else,for,in,while,do,switch,case,where,break,continue,fallthrough,return,
+    typealias,struct,class,enum,protocol,var,func,let,get,set,willSet,didSet,import,inout,init,deinit,extension,
+    subscript,prefix,operator,infix,postfix,precedence,associativity,left,right,none,convenience,dynamic,
+    final,lazy,mutating,nonmutating,optional,override,required,static,unowned,safe,weak,internal,
+    private,public,is,as,self,unsafe,dynamicType,true,false,nil,Type,Protocol,
+  },
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+  breaklines=true,
+  escapeinside={\%*}{*)},
+  numbers=left,
+  captionpos=b,
+  breakatwhitespace=true,
+  basicstyle=\linespread{1.0}\ttfamily\footnotesize, % https://tex.stackexchange.com/a/102728/129441
+}
+
+\lstset{
+  language=Swift,
+  numbers=left,
+  stepnumber=1,
+  numberstyle=\tiny,
+  breaklines=true,
+  breakautoindent=true,
+  postbreak=\space,
+  inputencoding=utf8,
+  extendedchars=\true,
+  basicstyle=\ttfamily\small,
+  showstringspaces=false,
+  columns=fullflexible,
+  keepspaces=true,
+  tabsize=4,
+  keywordstyle=\color{keyword},
+  stringstyle=\color{string},
+  commentstyle=\color{comment},
+  showspaces=false,
+  showstringspaces=false,
+  extendedchars=true,
+  backgroundcolor=\color{ListingBackground}
+}
+
+% Captions for listings
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={footnotesize}}
+
+
+
+%%%%%%%%%%%%%%%%%%%
+% Header & Footer
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{} 
+\renewcommand{\headrulewidth}{0.4pt} % line for header - 0.0pt = no line
+\renewcommand{\footrulewidth}{0.0pt} % line for footer - 0.0pt = no line
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\quad#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\quad#1}}
+
+\fancyhead[LO]{\textit{\rightmark}}	
+\fancyhead[RO]{\textit{\thepage}}
+
+\def\twoside{twoside} % macro needed
+\ifx \printstyle \twoside
+	% adapt footers and headers if two-sided
+	\fancyhead[LE]{\textit{\thepage}}	
+	\fancyhead[RE]{\textit{\rightmark}}
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%
+% Hyperref
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage[
+	pdftitle={\proposalTitle},
+	pdfauthor={\authorname},
+	pdfsubject={\proposalTitle},
+	pdfcreator={\authorname},
+	pdfkeywords={\proposalTitle, \authorname},
+	pdfpagemode=UseOutlines,
+	pdfdisplaydoctitle=true,
+	pdflang=en
+]{hyperref}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=LinkColor,
+	citecolor=LinkColor,
+	filecolor=LinkColor,
+	menucolor=LinkColor,
+	urlcolor=LinkColor,
+	bookmarksnumbered=true
+}
+
+
+
+
+

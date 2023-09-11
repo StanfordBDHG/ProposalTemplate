@@ -1,0 +1,37 @@
+\begin{titlepage}
+
+% Stanford logo
+\begin{textblock*}{3.8cm}[1,0](\paperwidth, 2.2cm)
+	\includegraphics[width=1.5cm]{Images/Stanford/Stanford.png}
+\end{textblock*}
+
+% Biodesign logo
+\begin{textblock*}{\paperwidth - \coverborderleft}(\coverborderleft, 2.5cm)
+	\includegraphics[width=5cm]{Images/Stanford/Biodesign.png}
+\end{textblock*}
+
+% Title
+\begin{textblock*}{\paperwidth - \coverborderleft -2cm}(\coverborderleft, 6cm)
+	\raggedright
+	{\sffamily \Large \worktype}\\
+	{\sffamily \huge \proposalTitle \par}
+\end{textblock*}
+
+% Author, Supervisor, and more ...
+\begin{textblock*}{\paperwidth - \coverborderleft - 2cm}(\coverborderleft, \paperheight - 5cm)
+	\begin{tabular}{l l}
+		\sffamily Author: & \sffamily \authorname \\
+		\sffamily Supervisor: & \sffamily \supervisor \\
+		\ifdefempty{\advisors}{}{\sffamily Advisors: & \sffamily \advisors \\}
+			\sffamily Submission Date: & \sffamily \submissionDate
+	\end{tabular}
+\end{textblock*}
+
+~\\
+
+\end{titlepage}
+
+
+
+
+

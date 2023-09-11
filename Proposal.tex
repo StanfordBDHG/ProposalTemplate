@@ -1,0 +1,210 @@
+%%%%%%%%%%%%%%%%%%%
+% Placeholders
+%%%%%%%%%%%%%%%%%%%
+
+% TODO: Add your name here
+\newcommand{\authorname}{}
+
+\newcommand{\worktype}{Research Proposal}
+\newcommand{\proposalTitle}{Proposal Title}
+
+\newcommand{\supervisor}{Paul Schmiedmayer, PhD}
+% TODO: Any additional advisors, separate them using `\\`
+\newcommand{\advisors}{}
+
+% TODO: Set the date manually or use \today
+\newcommand{\submissionDate}{\today}
+
+
+%%%%%%%%%%%%%%%%%%%
+% Settings
+%%%%%%%%%%%%%%%%%%%
+
+\input{Settings} 
+
+
+%%%%%%%%%%%%%%%%%%%
+% Main Document
+%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\frontmatter
+
+\include{TitlePage}
+
+
+\mainmatter
+
+\chapter*{Proposal}
+
+\begin{tcolorbox}
+	Create a small abstract that describes your thesis in a few lines.
+	It is a scientific practice that abstracts do not contain citations.
+	It should be a self-contained description of the work you describe in the proposal.
+	\\
+	An abstract must contain the following parts:
+	\begin{enumerate}
+		\item Provide context, e.g., the domain and its importance.
+		\item Narrow down the problem domain, build up the motivation and identify the problem
+		\item Define the solution and, e.g., what artifacts you want to build
+		\item How do you plan to validate/evaluate your results?
+	\end{enumerate}
+\end{tcolorbox}
+
+\section*{Problem Statement}
+
+\begin{tcolorbox}
+	Describe the challenge that you are trying to solve, and describe a promise on how to solve it.
+	% [bruegge2013object, 1.4.1 Requirements Elicitation]: "During requirements elicitation, the client and developers define the purpose of the system. The result of this activity is a description of the system in terms of actors and use cases. Actors represent the external entities that interact with the system. Actors include roles such as end users, other computers the system needs to deal with (e.g., a central bank computer, a network), and the environment (e.g., a chemical process). Use cases are general sequences of events that describe all the possible actions between an actor and the system for a given piece of functionality."
+	% [bruegge2013object, 1.4.2 Analysis]: "During analysis, developers aim to produce a model of the system that is correct, complete, consistent, and unambiguous. Developers transform the use cases produced during requirements elicitation into an object model that completely describes the system. During this activity, developers discover ambiguities and inconsistencies in the use case model that they resolve with the client. The result of analysis is a system model annotated with attributes, operations, and associations."
+	Refer to \textit{Object-Oriented Software Engineering Using UML, Patterns, and Java} by Bruegge and Dutoit for more information about the requirements elicitation and analysis process~\cite{bruegge2013object}.
+	% [wieringa2014design, 2.4 Summary]: "
+	%   • Different stakeholders in a design science research project may have different kinds of goals. Researchers are usually at least driven by curiosity and fun and may be driven by utility too. Sponsors are usually driven by utility and constrained by budgets but may occasionally allow researchers to do exploratory research.
+	%   • Each design science research project has a goal tree containing design goals and knowledge goals. There is always a knowledge goal, and usually there are design goals too."
+	% [wieringa2014design, 2.2 Design Problems]: "Goals deﬁne problems. How do we get from here to the goal? A design problem is a problem to (re)design an artifact so that it better contributes to the achievement of some goal. Fixing the goal for which we work puts us at some level in the goal hierarchy discussed in the previous section. An instrument design goal is the problem to design an instrument that will help us answer a knowledge question, and an artifact design goal is the problem to design an artifact that will improve a problem context."
+	% [wieringa2014design, 2.3 Knowledge Questions]: "The knowledge goals of a project should be reﬁned into knowledge questions. A knowledge question asks for knowledge about the world, without calling for an improvement of the world. All knowledge questions in this book are empirical knowledge questions, which require data about the world to answer them. This stands in contrast to analytical knowledge questions, which can be answered by conceptual analysis, such as mathematics or logic, without collecting data about the world."
+	You can use the design science methodology presented by Wieringa to formulate research goals, design problems, and knowledge questions~\cite{wieringa2014design}.
+	\\
+	A problem statement should include the following parts:
+	\begin{enumerate}
+		\item Provide context, e.g., the domain and its importance.
+		\item Narrow down to the problem domain and build up the motivation to identify the problem.
+		\item Establish the research gap: Detail your most important related work and what is missing in the state-of-the-art research. Why is it an important problem to solve? Show clear evidence that it is \textbf{not} solved yet.
+		\item Formulate research goals, design problems, and knowledge questions.
+		\item Highlight your promise: What you offer to solve the problem, and what are the key properties of your design? Describe the future artifacts that you want to build.
+	\end{enumerate}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	Use citations to refer to other scientific work\footnote{You can refer to the Stanford Honor Code for more information about scientific best practices: \url{https://communitystandards.stanford.edu/policies-guidance/honor-code}}.
+	As shown in the sentence above, you can use footnotes to refer to URLs as a convenience for the reader if you do not cite and refer to non-scientific work.
+	\\
+	To keep track of what you are referring to and give yourself the chance to always have this context right in place, you should follow the following guidelines:
+	\begin{verbatim}
+	% [CITE_KEY, SECTION]: "..."
+	...~\cite{CITE_KEY}
+	\end{verbatim}
+	Add one or more \LaTeX~comments above every citation you have that contains the \texttt{CITE\_KEY}, the \texttt{SECTION} you are referring to, as well as the content you are referring to within quotation marks.
+	\\
+	If you have a PDF file of the source you are referring to, place it in the sources folder, highlight the cited parts, and name it like the \texttt{CITE\_KEY}.
+	If you don't have access to a PDF version of the sources, provide a markdown file that contains a link enabling you to access the original (possibly using a Stanford login), as seen with the sources currently used in this proposal.
+	\\
+	This proposal provides you with several examples of this guideline.
+\end{tcolorbox}
+
+
+\section*{Related Work}
+
+\begin{tcolorbox}
+	Describe related work that has been done in the field and/or is related to your thesis. 
+	Collect literature in your \texttt{references.bib} file and refer to your collected literature using citations. 
+	Compare your proposed research to the current state-of-the-art research.
+	Identify if you provide a completely new approach or if you are improving existing research. 
+	Describe how your proposed system differs from existing approaches and the research delta between your work and existing work.
+	\\
+	Each related work must be \textbf{related to your work}.
+	You should classify and describe it according to two different types of related work:
+	\begin{itemize}
+		\item Related work can build upon and learn from. You should state what aspects of the related work are important for your research and how you can incorporate them into your design.
+		\item Related work that approached the challenge with a similar approach. State what differentiates your work from the existing work, why it is still relevant, and what additional value it provides.	
+	\end{itemize}
+\end{tcolorbox}
+
+\section*{System Requirements}
+
+\begin{tcolorbox}
+	Describe the requirements that your system should fulfill. 
+	Describe the structure and its interaction with other actors. 
+	List the functional and non-functional requirements for the system that you will develop as part of your thesis. 
+	\\
+	% [bruegge2013object, 4.3.1 Functional Requirements]: "Functional requirements describe the interactions between the system and its environment independent of its implementation. The environment includes the user and any other external system with which the system interacts."
+	% [bruegge2013object, 4.3.2 Nonfunctional Requirements]: "Nonfunctional requirements describe aspects of the system that are not directly related to the functional behavior of the system. Nonfunctional requirements include a broad variety of requirements that apply to many different aspects of the system, from usability to performance. The FURPS+ model 2 used by the Unified Process [Jacobson et al., 1999] provides the following categories of nonfunctional requirements: [...]"
+	Refer to \textit{Object-Oriented Software Engineering Using UML, Patterns, and Java} by Bruegge and Dutoit for more information about functional (4.3.1 Functional Requirements) and nonfunctional requirements (4.3.2 Nonfunctional Requirements)~\cite{bruegge2013object}.
+\end{tcolorbox}
+
+\subsection*{Functional Requirements}
+
+\begin{tcolorbox}
+	% [bruegge2013object, 4.3.1 Functional Requirements]: "Functional requirements describe the interactions between the system and its environment independent of its implementation. The environment includes the user and any other external system with which the system interacts."
+	Functional Requirements describe the interactions of the system with its environment without considering implementation details~\cite{bruegge2013object}.
+	\\
+	List and describe all functional requirements of your system.
+	The short title should be in the form "verb objective". 
+\end{tcolorbox}
+
+\begin{itemize}[itemindent=-4pt, leftmargin=34pt, align=left]
+    \item[FR1] \textbf{Short Title 1}: Description.
+    \item[FR2] \textbf{Short Title 2}: Description.
+    \item[FR3] \textbf{Short Title 3}: Description.
+    \item[FR4] \textbf{Short Title 4}: Description.
+\end{itemize}
+
+
+\subsection*{Non-Functional Requirements}
+
+\begin{tcolorbox}
+	% [bruegge2013object, 4.3.2 Nonfunctional Requirements]: "Nonfunctional requirements describe aspects of the system that are not directly related to the functional behavior of the system. Nonfunctional requirements include a broad variety of requirements that apply to many different aspects of the system, from usability to performance. The FURPS+ model 2 used by the Unified Process [Jacobson et al., 1999] provides the following categories of nonfunctional requirements: [...]"
+	Non-functional Requirements describe constraints that are not directly linked to the function of the system and describe requirements that apply to many different aspects of the system \cite{bruegge2013object}.
+	\\
+	List and describe all non-functional requirements of your system.
+	% [bruegge2013object, 4.3.2 Nonfunctional Requirements]: "The FURPS+ model 2 used by the Unified Process [Jacobson et al., 1999] provides the following categories of nonfunctional requirements:
+	%   • Usability [...]
+	%   • Reliability [...]
+	%   • Performance [...]
+	%   • Supportability [...]
+	%   The FURPS+ model provides additional categories of requirements typically also included under the general label of nonfunctional requirements:
+	%   • Implementation requirements [...]
+	%   • Interface requirements [...]
+	%   • Operations requirements [...]
+	%   • Packaging requirements [...]
+	%   • Legal requirements [...]"
+	Categorize them using the FURPS+ model described without the category \textbf{functionality} that was already covered with the functional requirements~\cite{bruegge2013object}. 
+\end{tcolorbox}
+
+\begin{itemize}[itemindent=-13pt, leftmargin=43pt, align=left]
+    \item[NFR1] \textbf{Category 1}: Description.
+    \item[NFR2] \textbf{Category 2}: Description.
+    \item[NFR3] \textbf{Category 3}: Description.
+    \item[NFR4] \textbf{Category 4}: Description.
+\end{itemize}
+
+
+\section*{Expected Outcome}
+
+\begin{tcolorbox}
+	Describe the expected outcome of your thesis:
+	\begin{itemize}
+		% [bruegge2013object, 4.4.2 Identifying Scenarios]: "Visionary scenarios describe a future system. Visionary scenarios are used both as a point in the modeling space by developers as they refine their ideas of the future system and as a communication medium to elicit requirements from users. Visionary scenarios can be viewed as an inexpensive prototype."
+		\item Explain your design at a high level. You can use visionary scenarios (described in \textit{Object-Oriented Software Engineering Using UML, Patterns, and Java} by Bruegge and Dutoit \cite{bruegge2013object}) to illustrate your future system. 
+		\item If developers can use the artifacts, you can use visionary code examples to describe the envisioned interaction.
+		\item Explain the key design challenges you can face and how you solved them.
+		\item Tell about your key validation or evaluation aspects: benchmarks, case studies, and important takeaways that you plan to validate or evaluate. Connect the evaluation or validation with the research goals defined by the problem statement.
+	\end{itemize}
+\end{tcolorbox}
+
+\section*{Time Schedule}
+
+\begin{tcolorbox}
+	Provide multiple milestones that you can use to check your progress while working on the thesis.
+	Don't be too detailed to keep room for an agile process but identify the significant milestones you want to meet based on the previous sections.
+\end{tcolorbox}
+
+\begin{itemize}[itemindent=-13pt, leftmargin=43pt, align=left]
+    \item[\textbf{Milestone 1} - Date 1:] Description.
+    \item[\textbf{Milestone 2} - Date 2:] Description.
+    \item[\textbf{Milestone 3} - Date 3:] Description.
+    \item[\textbf{Milestone 4} - Date 4:] Description.
+\end{itemize}
+
+
+\backmatter
+
+\bibliography{References.bib}
+
+\end{document}
+
+
+
+
+
