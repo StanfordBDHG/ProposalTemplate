@@ -38,7 +38,7 @@
 
 \chapter*{Proposal}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[breakable]
 	Create a small abstract that describes your thesis in a few lines.
 	It is a scientific practice that abstracts do not contain citations.
 	It should be a self-contained description of the work you describe in the proposal.
@@ -52,21 +52,23 @@
 	\end{enumerate}
 \end{tcolorbox}
 
-\section*{Problem Statement}
+\section*{Needs Statement}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[breakable]
 	Describe the challenge that you are trying to solve, and describe a promise on how to solve it.
+	% [yock2015biodesign, Process Insights, page 39]: "The purpose of the Identify phase (shown in Figure I1) is to gather a number of unmet medical needs through observation and then screen this list down to a promising few, based on information about the key clinical, stakeholder, and market characteristics."
+	Identify a significant, unmet need by observing, collecting, and filtering key information about the involved stakeholders as done in the Biodesign process described by \citeauthor{yock2015biodesign}~\cite{yock2015biodesign}.
 	% [bruegge2013object, 1.4.1 Requirements Elicitation]: "During requirements elicitation, the client and developers define the purpose of the system. The result of this activity is a description of the system in terms of actors and use cases. Actors represent the external entities that interact with the system. Actors include roles such as end users, other computers the system needs to deal with (e.g., a central bank computer, a network), and the environment (e.g., a chemical process). Use cases are general sequences of events that describe all the possible actions between an actor and the system for a given piece of functionality."
 	% [bruegge2013object, 1.4.2 Analysis]: "During analysis, developers aim to produce a model of the system that is correct, complete, consistent, and unambiguous. Developers transform the use cases produced during requirements elicitation into an object model that completely describes the system. During this activity, developers discover ambiguities and inconsistencies in the use case model that they resolve with the client. The result of analysis is a system model annotated with attributes, operations, and associations."
-	Refer to \textit{Object-Oriented Software Engineering Using UML, Patterns, and Java} by Bruegge and Dutoit for more information about the requirements elicitation and analysis process~\cite{bruegge2013object}.
+	Refer to \textit{Object-Oriented Software Engineering Using UML, Patterns, and Java} by \citeauthor{bruegge2013object} for more information about the similar requirements elicitation and analysis process focused on software systems~\cite{bruegge2013object}.
 	% [wieringa2014design, 2.4 Summary]: "
 	%   • Different stakeholders in a design science research project may have different kinds of goals. Researchers are usually at least driven by curiosity and fun and may be driven by utility too. Sponsors are usually driven by utility and constrained by budgets but may occasionally allow researchers to do exploratory research.
 	%   • Each design science research project has a goal tree containing design goals and knowledge goals. There is always a knowledge goal, and usually there are design goals too."
 	% [wieringa2014design, 2.2 Design Problems]: "Goals deﬁne problems. How do we get from here to the goal? A design problem is a problem to (re)design an artifact so that it better contributes to the achievement of some goal. Fixing the goal for which we work puts us at some level in the goal hierarchy discussed in the previous section. An instrument design goal is the problem to design an instrument that will help us answer a knowledge question, and an artifact design goal is the problem to design an artifact that will improve a problem context."
 	% [wieringa2014design, 2.3 Knowledge Questions]: "The knowledge goals of a project should be reﬁned into knowledge questions. A knowledge question asks for knowledge about the world, without calling for an improvement of the world. All knowledge questions in this book are empirical knowledge questions, which require data about the world to answer them. This stands in contrast to analytical knowledge questions, which can be answered by conceptual analysis, such as mathematics or logic, without collecting data about the world."
-	You can use the design science methodology presented by Wieringa to formulate research goals, design problems, and knowledge questions~\cite{wieringa2014design}.
+	You can also use the design science methodology presented by \citeauthor{wieringa2014design} to formulate research goals, design problems, and knowledge questions~\cite{wieringa2014design}.
 	\\
-	A problem statement should include the following parts:
+	Your narrative should include the following parts:
 	\begin{enumerate}
 		\item Provide context, e.g., the domain and its importance.
 		\item Narrow down to the problem domain and build up the motivation to identify the problem.
@@ -74,10 +76,13 @@
 		\item Formulate research goals, design problems, and knowledge questions.
 		\item Highlight your promise: What you offer to solve the problem, and what are the key properties of your design? Describe the future artifacts that you want to build.
 	\end{enumerate}
+	% [yock2015biodesign, 1.3 Need Statement Development, page 91]: "As previewed in 1.2 Needs Exploration, wellconstructed need statements have three essential components: (1) the problem; (2) the effected population; and (3) the targeted change in outcome (see Figure 1.3.1).
+	%	The problem communicates the health-related dilemma that requires attention. The population clarifies the group that is experiencing the problem (and potentially foreshadows the market for the solution). The outcome specifies the targeted change in outcome, against which solutions to the problem will be evaluated."
+	Conclude your problem exploration with a comprehensive summary in the form of a needs statement, following the \textit{"A way to address (problem) in (population) that (outcome)"}~\cite{yock2015biodesign} format as defined by \citeauthor{yock2015biodesign}.
 \end{tcolorbox}
 
-\begin{tcolorbox}
-	Use citations to refer to other scientific work\footnote{You can refer to the Stanford Honor Code for more information about scientific best practices: \url{https://communitystandards.stanford.edu/policies-guidance/honor-code}}.
+\begin{tcolorbox}[breakable]
+	\textbf{Important:} Use citations to refer to other scientific work\footnote{You can refer to the Stanford Honor Code for more information about scientific best practices: \url{https://communitystandards.stanford.edu/policies-guidance/honor-code}}.
 	As shown in the sentence above, you can use footnotes to refer to URLs as a convenience for the reader if you do not cite and refer to non-scientific work.
 	\\
 	To keep track of what you are referring to and give yourself the chance to always have this context right in place, you should follow the following guidelines:
@@ -96,7 +101,7 @@
 
 \section*{Related Work}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[breakable]
 	Describe related work that has been done in the field and/or is related to your thesis. 
 	Collect literature in your \texttt{references.bib} file and refer to your collected literature using citations. 
 	Compare your proposed research to the current state-of-the-art research.
@@ -113,7 +118,7 @@
 
 \section*{System Requirements}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[breakable]
 	Describe the requirements that your system should fulfill. 
 	Describe the structure and its interaction with other actors. 
 	List the functional and non-functional requirements for the system that you will develop as part of your thesis. 
@@ -125,7 +130,7 @@
 
 \subsection*{Functional Requirements}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[breakable]
 	% [bruegge2013object, 4.3.1 Functional Requirements]: "Functional requirements describe the interactions between the system and its environment independent of its implementation. The environment includes the user and any other external system with which the system interacts."
 	Functional Requirements describe the interactions of the system with its environment without considering implementation details~\cite{bruegge2013object}.
 	\\
@@ -143,7 +148,7 @@
 
 \subsection*{Non-Functional Requirements}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[breakable]
 	% [bruegge2013object, 4.3.2 Nonfunctional Requirements]: "Nonfunctional requirements describe aspects of the system that are not directly related to the functional behavior of the system. Nonfunctional requirements include a broad variety of requirements that apply to many different aspects of the system, from usability to performance. The FURPS+ model 2 used by the Unified Process [Jacobson et al., 1999] provides the following categories of nonfunctional requirements: [...]"
 	Non-functional Requirements describe constraints that are not directly linked to the function of the system and describe requirements that apply to many different aspects of the system \cite{bruegge2013object}.
 	\\
@@ -172,11 +177,11 @@
 
 \section*{Expected Outcome}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[breakable]
 	Describe the expected outcome of your thesis:
 	\begin{itemize}
 		% [bruegge2013object, 4.4.2 Identifying Scenarios]: "Visionary scenarios describe a future system. Visionary scenarios are used both as a point in the modeling space by developers as they refine their ideas of the future system and as a communication medium to elicit requirements from users. Visionary scenarios can be viewed as an inexpensive prototype."
-		\item Explain your design at a high level. You can use visionary scenarios (described in \textit{Object-Oriented Software Engineering Using UML, Patterns, and Java} by Bruegge and Dutoit \cite{bruegge2013object}) to illustrate your future system. 
+		\item Explain your design at a high level. You can use visionary scenarios (described in \textit{Object-Oriented Software Engineering Using UML, Patterns, and Java} by Bruegge and Dutoit~\cite{bruegge2013object}) to illustrate your future system.
 		\item If developers can use the artifacts, you can use visionary code examples to describe the envisioned interaction.
 		\item Explain the key design challenges you can face and how you solved them.
 		\item Tell about your key validation or evaluation aspects: benchmarks, case studies, and important takeaways that you plan to validate or evaluate. Connect the evaluation or validation with the research goals defined by the problem statement.
@@ -185,7 +190,7 @@
 
 \section*{Time Schedule}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[breakable]
 	Provide multiple milestones that you can use to check your progress while working on the thesis.
 	Don't be too detailed to keep room for an agile process but identify the significant milestones you want to meet based on the previous sections.
 \end{tcolorbox}
