@@ -8,6 +8,7 @@ SPDX-License-Identifier: MIT
 
 -->
 
-# Object-Oriented Software Engineering Using UML, Patterns, and Java
+Proposal Template Contributors
+=================================
 
-Stanford Library: https://searchworks.stanford.edu/view/5511207
+* [Paul Schmiedmayer](https://github.com/PSchmiedmayer)

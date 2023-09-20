@@ -8,6 +8,6 @@ SPDX-License-Identifier: MIT
 
 -->
 
-# Object-Oriented Software Engineering Using UML, Patterns, and Java
+# Biodesign: The Process of Innovating Medical Technologies
 
-Stanford Library: https://searchworks.stanford.edu/view/5511207
+Stanford Library: https://searchworks.stanford.edu/view/L312369

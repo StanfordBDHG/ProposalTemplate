@@ -6,20 +6,15 @@
 # SPDX-License-Identifier: MIT
 #
 
-.DS_Store
-*.aux
-*.tcp
-*.log
-*.tps
-*.synctex
-*.lof
-*.toc
-*.out
-*.idx
-*.glo
-*.lot
-*.lol
-*.synctex.gz
-*.bbl
-*.blg
-.texpadtmp
+
+name: License
+
+on:
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  reuse_action:
+    name: REUSE Compliance Check
+    uses: StanfordBDHG/.github/.github/workflows/reuse.yml@v2

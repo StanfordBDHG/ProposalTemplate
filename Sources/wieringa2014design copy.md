@@ -8,6 +8,6 @@ SPDX-License-Identifier: MIT
 
 -->
 
-# Object-Oriented Software Engineering Using UML, Patterns, and Java
+# Design Science Methodology for Information Systems and Software Engineering
 
-Stanford Library: https://searchworks.stanford.edu/view/5511207
+Stanford Library: https://searchworks.stanford.edu/view/11017011
