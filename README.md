@@ -10,6 +10,8 @@ SPDX-License-Identifier: MIT
 
 # Proposal Template
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8364566.svg)](https://doi.org/10.5281/zenodo.8364566)
+
 This repository contains the research proposal template of the Stanford Biodesign Digital Health Group.
 
 You can learn more about our research projects and student oppertunities at [biodesigndigitalhealth.stanford.edu](https://biodesigndigitalhealth.stanford.edu).
