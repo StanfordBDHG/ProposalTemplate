@@ -14,8 +14,10 @@ SPDX-License-Identifier: MIT
 
 This repository contains the research proposal template of the Stanford Biodesign Digital Health Group.
 
-You can learn more about our research projects and student oppertunities at [biodesigndigitalhealth.stanford.edu](https://biodesigndigitalhealth.stanford.edu).
+> [!IMPORTANT]  
+> If you import this template into Overleaf or your favorite LaTex editor, please be sure that you select `proposal.tex` as the main document in your typesetting preferences.
 
+You can learn more about our research projects and student research oppertunities at [biodesigndigitalhealth.stanford.edu](https://biodesigndigitalhealth.stanford.edu).
 
 ![Stanford Byers Center for Biodesign Logo](https://raw.githubusercontent.com/StanfordBDHG/.github/main/assets/biodesign-footer-light.png#gh-light-mode-only)
 ![Stanford Byers Center for Biodesign Logo](https://raw.githubusercontent.com/StanfordBDHG/.github/main/assets/biodesign-footer-dark.png#gh-dark-mode-only)
